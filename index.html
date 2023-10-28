@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Pyramid photos</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        margin: 0;
+        background-color: #f1e3e3;
+      }
+
+      .photos {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+      }
+
+      .rows {
+        display: flex;
+        justify-content: center;
+        position: relative;
+        z-index: 1;
+      }
+
+      .arrow {
+        width: 60px;
+        height: 60px;
+        background-color: #b592d7;
+        margin: 5px;
+        transition: background-color 0.3s;
+        position: relative;
+      }
+
+      .arrow:hover {
+        background-color: #eba7da;
+      }
+
+      .pic {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        max-width: 100%;
+        max-height: 100%;
+        z-index: 0;
+      }
+
+      .arrow:before {
+        content: "";
+        width: 0;
+        height: 0;
+        border-left: 30px solid transparent;
+        border-right: 30px solid transparent;
+        border-bottom: 30px solid #b592d7;
+        position: absolute;
+        bottom: -30px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: -1;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="photos">
+      <div class="rows">
+        <div class="arrow">
+          <img
+            class="pic"
+            src="https://t4.ftcdn.net/jpg/00/83/42/85/240_F_83428548_wz94P9jWdyC4QEBBzPpUMn4hp9Vt64st.jpg"
+            alt="pic 1"
+          />
+        </div>
+      </div>
+      <div class="rows">
+        <div class="arrow">
+          <img
+            class="pic"
+            src="https://t4.ftcdn.net/jpg/00/46/07/29/240_F_46072983_xIlnjWDrnK9iAgUJdakrzacGGxu5nGWa.jpg"
+            alt="pic 2"
+          />
+        </div>
+        <div class="arrow">
+          <img
+            class="pic"
+            src="https://t3.ftcdn.net/jpg/05/73/31/88/240_F_573318881_uUICCB03rz0H28vozZev15ukcyOBqbXA.jpg"
+            alt="pic 3"
+          />
+        </div>
+      </div>
+      <div class="rows">
+        <div class="arrow">
+          <img
+            class="pic"
+            src="https://t4.ftcdn.net/jpg/00/83/32/41/240_F_83324109_MEkgttqm9x7bvIHG2QCLuqNdcCzjpNk1.jpg"
+            alt="pic 4"
+          />
+        </div>
+        <div class="arrow">
+          <img
+            class="pic"
+            src="https://t3.ftcdn.net/jpg/05/58/86/06/240_F_558860656_jzbS1KvgiLZzQZz3zeaPdpfGl8IV7HOn.jpg"
+            alt="pic 5"
+          />
+        </div>
+        <div class="arrow">
+          <img
+            class="pic"
+            src="https://t4.ftcdn.net/jpg/00/83/42/85/240_F_83428548_wz94P9jWdyC4QEBBzPpUMn4hp9Vt64st.jpg"
+            alt="pic 6"
+          />
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
